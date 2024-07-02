@@ -15,6 +15,7 @@ public class UsuarioEntity {
 
    @Id
    private String correo;
+
    private String nombre;
    private String celular;
    private String password;
