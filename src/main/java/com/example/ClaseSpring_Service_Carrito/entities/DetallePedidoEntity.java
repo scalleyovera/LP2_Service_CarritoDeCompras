@@ -23,7 +23,7 @@ public class DetallePedidoEntity {
     private ProductoEntity productoEntity;
 
     @ManyToOne
-    @JoinColumn(name = "pedido_id")
+    @JoinColumn(name = "pedido_id", nullable = false)
     private PedidoEntity pedidoEntity;
 
 

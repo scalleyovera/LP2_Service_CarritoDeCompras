@@ -8,6 +8,7 @@ import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
+
 @Entity
 @Table(name = "tb_pedido")
 @NoArgsConstructor
@@ -19,17 +20,16 @@ public class PedidoEntity {
 
     @Id
     @GeneratedValue( strategy = GenerationType.IDENTITY)
-    @Column(name = "pedido_id")
     private Long pedidoId;
 
     private LocalDate fechaCompra;
 
     @ManyToOne
-    @JoinColumn(name = "fk_usuario", nullable = false)
+    @JoinColumn(name = "usuario_id", nullable = false)
     private UsuarioEntity usuario;
 
     @OneToMany(mappedBy = "pedidoEntity", cascade = CascadeType.ALL)
-    private List<DetallePedidoEntity> detallePedidoEntities;
+    private List<DetallePedidoEntity>detallePedido;
 
 
 
