@@ -29,7 +29,6 @@ public class PedidoEntity {
     private UsuarioEntity usuario;
 
     @OneToMany(mappedBy = "pedidoEntity", cascade = CascadeType.ALL)
-    @JoinColumn(name = "detalle_id")
     private List<DetallePedidoEntity> detallePedidoEntities;
 
 
